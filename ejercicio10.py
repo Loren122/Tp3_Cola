@@ -1,11 +1,9 @@
 from cola import Cola
 from pila import Pila
+
 # 10. Dada una cola con las notificaciones de las aplicaciones de redes sociales de un Smartphone,
 # de las cual se cuenta con la hora de la notificación, la aplicación que la emitió y el mensaje,
 # resolver las siguientes actividades:
-
-
-
 
 class Notificacion:
 
@@ -15,28 +13,18 @@ class Notificacion:
         self.mensaje = mensaje
 
 
-# Crear la cola de notificaciones
-cola_notificaciones = Cola()
-
 def cargar_cola(cola):
      notificaciones = [
         Notificacion("9:30", "Facebook", "Tienes una nueva solicitud de amistad"),
+        Notificacion("11:43", "Facebook", "¡Tienes un nuevo mensaje!"),
         Notificacion("13:15", "Instagram", "Te han etiquetado en una foto"),
         Notificacion("11:00", "Twitter", "Nuevo retweet en tu publicación sobre Python"),
-        Notificacion("15:45", "Twitter", " ¡Noticia destacada de Python!")
+        Notificacion("15:57", "Twitter", "¡Noticia destacada de Python!")
      ]
      # Agregar notificaciones a la cola
      for notificacion in notificaciones:
          cola.arrive(notificacion)
          
-
-# Mostrar las notificaciones de la cola
-# while cola_notificaciones.size() > 0:
-#     notificacion = cola_notificaciones.atention()
-#     print(f"Hora: {notificacion.hora}")
-#     print(f"Aplicación: {notificacion.aplicacion}")
-#     print(f"Mensaje: {notificacion.mensaje}")
-
 
 # a. escribir una función que elimine de la cola todas las notificaciones de Facebook
 def borrar_notif_facebook(cola):
