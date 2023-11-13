@@ -16,7 +16,7 @@ def download():
 # b. imprima el primer documento de la cola (solamente mostrar el nombre de este por pantalla).
 def getDocument(cola):
     print()
-    print('imprimo el primero (solo el nombre)')
+    print('Nombre del primer documento de la cola')
     print(cola.atention()[1])
 
 
